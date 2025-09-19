@@ -1,0 +1,35 @@
+Table customers {
+  customer_id text [pk]
+  customer_state text
+}
+
+Table orders {
+  order_id text [pk]
+  customer_id text [ref: > customers.customer_id]
+  order_status text
+  order_purchase_timestamp timestamp
+}
+
+Table order_items {
+  order_id text [ref: > orders.order_id]
+  product_id text [ref: > products.product_id]
+  seller_id text [ref: > sellers.seller_id]
+  price numeric
+  freight_value numeric
+}
+
+Table products {
+  product_id text [pk]
+  product_category_name text
+}
+
+Table sellers {
+  seller_id text [pk]
+  seller_state text
+}
+
+Table order_reviews {
+  review_id text [pk]
+  order_id text [ref: > orders.order_id]
+  review_score int
+}
