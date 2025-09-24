@@ -45,3 +45,21 @@ GROUP BY payment_type
 ORDER BY total DESC
 LIMIT 5;
 
+
+-- Список клиентов и количество заказов у каждого (включая тех, у кого заказов нет)
+SELECT c.customer_id,
+       COUNT(o.order_id) AS total_orders
+FROM customers c
+LEFT JOIN orders o ON c.customer_id = o.customer_id
+GROUP BY c.customer_id
+ORDER BY total_orders DESC
+LIMIT 10;
+
+-- Список продавцов и количество товаров, которые они продали
+SELECT s.seller_id,
+       COUNT(oi.product_id) AS total_products_sold
+FROM order_items oi
+RIGHT JOIN sellers s ON oi.seller_id = s.seller_id
+GROUP BY s.seller_id
+ORDER BY total_products_sold DESC
+LIMIT 10;
