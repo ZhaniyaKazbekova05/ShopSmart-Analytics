@@ -28,13 +28,6 @@
 9. Количество продавцов  
 10. ТОП-5 способов оплаты  
 
-📸 Скриншоты работы:  
-
-![Пример 1](images/Screenshot%202025-09-21%20at%2017.25.24.png)  
-![Пример 2](images/Screenshot%202025-09-21%20at%2017.25.32.png)  
-![Пример 3](images/Screenshot%202025-09-21%20at%2017.37.45.png)  
-
----
 
 ## ⚙️ Используемые инструменты
 - **PostgreSQL** — хранение и обработка данных  
@@ -58,40 +51,3 @@ ShopSmart-Analytics/
 │── README.md # описание проекта
 
 
-
-
----
-
-## 📝 Как запустить проект
-
-### 1. Подготовка базы данных
-1. Создать базу в PostgreSQL:  
-   ```sql
-   CREATE DATABASE ecommerce_olist;
-Выполнить SQL-схему:
-
-bash
-
-psql -U postgres -d ecommerce_olist -f sql/schema_postgres.sql
-Загрузить CSV через \copy:
-
-sql
-
-\copy customers FROM 'data/archive/olist_customers_dataset.csv' CSV HEADER;
-\copy orders FROM 'data/archive/olist_orders_dataset.csv' CSV HEADER;
-\copy order_items FROM 'data/archive/olist_order_items_dataset.csv' CSV HEADER;
-\copy products FROM 'data/archive/olist_products_dataset.csv' CSV HEADER;
-\copy sellers FROM 'data/archive/olist_sellers_dataset.csv' CSV HEADER;
-\copy order_payments FROM 'data/archive/olist_order_payments_dataset.csv' CSV HEADER;
-\copy order_reviews FROM 'data/archive/olist_order_reviews_dataset.csv' CSV HEADER;
-\copy geolocation FROM 'data/archive/olist_geolocation_dataset.csv' CSV HEADER;
-2. Проверка SQL-запросов
-sql
-
-\i sql/queries.sql
-3. Запуск Python-скрипта
-bash
-
-cd ShopSmart-Analytics
-source venv/bin/activate     # активация виртуального окружения
-python scripts/main.py
