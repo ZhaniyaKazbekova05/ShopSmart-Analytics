@@ -38,16 +38,3 @@
 - **Kaggle Dataset**: [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)  
 
 ---
-
-## 📂 Структура проекта
-ShopSmart-Analytics/
-│── data/ # CSV-файлы из Kaggle
-│── images/ # ER-диаграмма и скриншоты
-│── scripts/ # Python-скрипты
-│ └── main.py
-│── sql/ # SQL-скрипты
-│ ├── schema_postgres.sql
-│ └── queries.sql
-│── README.md # описание проекта
-
-
