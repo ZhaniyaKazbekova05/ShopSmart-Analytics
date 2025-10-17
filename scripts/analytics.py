@@ -8,7 +8,7 @@ from datetime import datetime
 
 # ========== НАСТРОЙКИ ==========
 DB_USER = "postgres"
-DB_PASS = "kazbekova2005D."  # <-- замени на свой пароль (или оставь "" если пустой)
+DB_PASS = "kazbekova2005D." 
 DB_HOST = "localhost"
 DB_PORT = "5432"
 DB_NAME = "ecommerce_olist"
