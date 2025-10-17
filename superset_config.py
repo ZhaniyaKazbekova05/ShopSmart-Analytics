@@ -18,3 +18,9 @@ CORS_OPTIONS = {
 }
 
 
+# --- Разрешить загрузку CSV ---
+UPLOAD_FOLDER = "/Users/zhaniyakazbekova/Desktop"
+ALLOWED_EXTENSIONS = {"csv", "tsv", "txt"}
+FEATURE_FLAGS = {
+    "ALLOW_FILE_UPLOAD": True
+}

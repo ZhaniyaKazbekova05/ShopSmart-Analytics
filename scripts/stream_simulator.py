@@ -20,6 +20,7 @@ def main():
 
         ptype = random.choice(PAYMENT_TYPES)
         value = round(random.uniform(20, 300), 2)
+        
 
         # вставляем платеж
         cur.execute("""
